@@ -1,0 +1,17 @@
+<div class="row">
+
+  <div class="span4 small-6 columns">
+    <ul id="event-list" class="sortable">
+      <li>Loading events...</li>
+    </ul>
+  </div>
+<% if current_user %>
+  <div class="span4 small-6 columns">
+    <ul id="user-list" class="sortable">
+      <% current_user.events.each do |user_meetup| %>
+        <li class="user-meet"> <a href="<%= user_meetup.link %>"> <%= user_meetup.name %> </a></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+</div>

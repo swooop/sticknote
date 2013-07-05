@@ -1,0 +1,49 @@
+// Place all the styles related to the Events controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.meet {
+  background-color: gray;
+}
+
+li {
+  list-style: none;
+}
+
+.sortable {
+  min-height: 300px;
+  background-color: yellow;
+  padding-top: 0.2em auto;
+  margin-top: 1em;
+  border-radius: 0.6em;
+
+  li {
+    margin: 0.1em;
+    border-radius: 0.6em;
+    padding: 0.3em 0em 0.4em 0.6em;
+    
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  p {
+    margin-bottom:0;
+  }
+
+  .ui-sortable-helper {
+    background-color: red;
+    opacity: 0.5;
+    cursor: move !important;
+    z-index: 2000;
+    position: absolute;
+  }
+  .ui-sortable-placeholder {
+    height: 30px;
+  }
+}

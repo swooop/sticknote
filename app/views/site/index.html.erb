@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="small-4 small-centered columns">
+    <h1> The Bearded Wanderer </h1>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="small-8 small-centered columns">
+    <h4>Thinking of going to any tech events in London?</h4>
+    <h4> Just Register below to find events and add them to your personal selection... </h4>
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-6 small-centered columns">
+    <fieldset>
+        <legend>Log In</legend>
+      <form method="POST" action="/login">
+        <input type="text" id="email" name="email" placeholder="Email">
+      
+    
+        <input type="password" id="password" name="password" placeholder="password">
+    
+        <input type="submit" class="small button primary radius" value="Login">
+    </form>
+   </fieldset>
+  </div>
+</div>
+
+<div class="row">
+  <div class="small-6 small-centered columns">
+    <%= form_for @new_user do |f| %>
+      <%= f.text_field :username, :placeholder => "Username" %>
+      <%= f.text_field :email, :placeholder => "Email address" %>
+      <%= f.password_field :password, :placeholder => "Password" %>
+      <%= f.password_field :password_confirmation, :placeholder => "Confirm password" %>
+      <%= f.submit "Register", class: 'button success round' %>
+    <% end %>
+  </div>
+</div>
