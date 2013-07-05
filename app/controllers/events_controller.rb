@@ -21,7 +21,7 @@ class EventsController < ApplicationController
     render :json => meetups
   end
 
-  def nomz
+  def meetup_parts
     meetup_id = params[:id]
     meetup_name = params[:name]
     meetup_venue = params[:venue]

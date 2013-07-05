@@ -69,7 +69,7 @@ $(function() {
           var meetupTime = $(element[0]).data('event-time');
           var meetupLink = $(element[0]).data('event-link');
 
-          $.ajax( { url: "/events/nomz",
+          $.ajax( { url: "/events/meetup_parts",
             data: JSON.stringify({id : meetupId,
                                   name : meetupEventName,
                                   group : meetupGroupName,
